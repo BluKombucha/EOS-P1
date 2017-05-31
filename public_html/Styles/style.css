@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
 }
+
 img {
     width: 100%;
     height: auto;
@@ -8,12 +9,27 @@ img {
 .row:after {
     content: "";
     clear: both;
-    display: table;
+    display: block;
 }
 [class*="col-"] {
     float: left;
     padding: 15px;
     width: 100%;
+}
+.flex-container {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column-reverse;
+    flex-direction: column-reverse;
+    width: 25%;
+    background-color: lightgrey;
+    float: left;
+    padding: 15px;
+    width: 100%;
+}
+.flex-item {
+    background-color: cornflowerblue;
+   
 }
 @media only screen and (min-width: 600px) {
     .col-s-1 {width: 8.33%;}
@@ -53,8 +69,8 @@ html {
 }
 .menu ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
 }
 .menu li {
     padding: 8px;
